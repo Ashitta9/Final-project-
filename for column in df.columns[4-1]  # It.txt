@@ -1,0 +1,18 @@
+for column in df.columns[4:-1]:  # Iterating over the desired columns
+    plt.figure(figsize=(12, 5))
+    data = df[column].value_counts().reset_index()
+    data.columns = ['value', 'count']  # Renaming columns for clarity
+    
+    ax = sns.barplot(x='value', y='count', data=data)
+    
+    plt.title(column)
+    plt.xticks(rotation=45)
+    plt.show()  # Display the plot for each column
+
+    print(column, data['value'].tolist(), data['count'].tolist())
+
+
+Username - ashittaalias1996@gmail.com_tjcm
+Password - UZM57jq
+
+422840279789901
